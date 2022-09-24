@@ -1,16 +1,109 @@
 <html>
-<body>
-<p id="demo">Select a new car</p>
-<select id="mySelect" onchange="myFunction()">
-<option value ="Audi">Audi</option>
-<option value ="BMW">BMW</option>
-<option value ="Volvo">Volvo</option>
-</select>
-<script>
-	function myFunction(){
-	var x  =document.getElementById("mySelect").value;
-	document.getElementById("demo").innerHTML="You Selected: "+x;
+<head>
+    <title>Assignment 4</title>
+    <style>
+        	#box1
+	{
+        	background-color: rgb(76,153,0);
+      	 padding: 20px;
+       	 border-style:inset;
+       	 border-radius: 20px;
+        	border-width: 0px;
+        	border-color: rgb(227, 220, 245);
+        	margin-left: 50px;
+        	margin-right: 50px;
+        	margin-bottom: 20px;
+        	text-align: center;
+    	}
+    
+    
+    	#box2{
+    	background-color: rgb(216, 150, 150);
+    	padding: 0px;
+    	border-style:inset;
+    	border-radius: 20px;
+    	border-width: 0px;
+    	border-color: rgb(245, 220, 221);
+    	margin-left: 50px;
+    	margin-right: 50px;
+    	margin-bottom: 20px;
+    	text-align: center;
+    	}
+    
+   	 #box3{
+        	background-color: rgb(87, 223, 205);
+        	padding: 2px;
+       	 border-style:inset;
+        	border-radius: 20px;
+        	border-width: 0px;
+        	border-color: beige;
+        	margin-left: 50px;
+        	margin-right: 50px;
+        	margin-bottom: 20px;
+        	text-align: center;
+        	}
+    
+    	#imgg{
+        	display: none;
+	padding-top: 20px;
+        	margin-left: 550px;
+   	 }
+img
+{
+padding-top: 20px;
 }
-</script>
+    </style>
+</head>
+<body style="background-color:rgb(153, 153, 0);">
+    
+    <br><br>
+    
+    <div id="box1"  >
+
+        <button onmouseover="pingAlert(this);" style="font-size: x-large;">Name and reg_no</button>
+        
+    </div>
+
+    <div id="box2">
+        
+        <img onmouseout="normPic(this);" onmouseover="largerPic(this);"  src="16566811187507.jpg" alt="" width="320px" height="180px">
+        <br>
+        <p onmouseout="normTxt(this);" onmouseover="largerTxt(this);" id="boxtxt"><b>Taylor Swift</b></p>
+
+    </div>
+
+    <div id="box3">
+        <h2>dvdc1001@gmail.com</h2>
+    </div>
+
+    <script>
+        function myFunction(){
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML ="You Selected : " + x;
+        }
+
+        function largerPic(x){
+            x.style.width = "640px";
+            x.style.height = "360px";
+        }
+
+        function normPic(x){
+            x.style.width = "320px";
+            x.style.height = "180px";
+        }
+
+        function normTxt(y){
+            document.getElementById("boxtxt").style.fontSize = "large";
+        }
+        
+        
+        function largerTxt(y){
+            document.getElementById("boxtxt").style.fontSize = "xx-large";
+        }
+
+        function pingAlert(z){
+            alert("Name: Divyadrishti Chhetri \nRegistration No: 202000282 ");
+        }
+    </script>
 </body>
 </html>
